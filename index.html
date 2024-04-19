@@ -1,113 +1,362 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html> 
 
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Survey Form</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-</head>
+<html lang="en"> 
 
-<body>
-    <main>
-        <header>
-            <h1 id="title">Survey Form</h1>
-            <p id="description">Thank You For Taking Your Time To Give Us FeedBack</p>
-        </header>
-        <form id="survey-form">
 
-            <div class="form-group">
-                <label for="name" id="name-label">Name</label>
-                <input type="text" name="name" id="name" placeholder="Enter Your Name" required>
-            </div>
-            <div class="form-group">
-                <label for="email" id="email-label">Email</label>
-                <input type="email" name="email" id="email" placeholder="Enter Your Email" required>
-            </div>
-            <div class="form-group">
-                <label for="age" id="number-label">Age</label>
-                <input type="number" name="age" id="number" min="1" max="99" placeholder="Enter Your Age">
-            </div>
+<head> 
 
-            <div class="form-group">
-                <label for="occupation">Choose A Role That Best Describes You</label>
-                <select name="occupation" id="dropdown">
-                    <option selected disabled value>Select Your Role</option>
-                    <option value="student">Student</option>
-                    <option value="full-time-job">Full Time Job</option>
-                    <option value="part-time-job">Part Time Job</option>
-                    <option value="prefer-to-not-say">Prefer Not To Say</option>
-                    <option value="other">Other</option>
-                </select>
-            </div>
+    <meta charset="UTF-8"> 
 
-            <div class="form-group">
-                <label for="rating">Would You Recommend Our Product To A Friend ?</label>
-                <div class="radio-group">
-                    <input type="radio" name="rating" id="never" value="never"><label for="never"> Never </label>
-                </div>
-                <div class="radio-group">
-                    <input type="radio" name="rating" id="maybe" value="maybe"><label for="maybe"> Maybe </label>
-                </div>
-                <div class="radio-group">
-                    <input type="radio" name="rating" id="likely" value="likely"><label for="likely"> Likely </label>
-                </div>
-                <div class="radio-group">
-                    <input type="radio" name="rating" id="definitely" value="definitely"><label for="definitely">
-                        Definitely
-                    </label>
-                </div>
-            </div>
+    <meta http-equiv="X-UA-Compatible" 
 
-            <div class="form-group">
-                <label for="liked">Select Things That You Liked About Our Product</label>
-                <div class="checkbox-group">
-                    <input type="checkbox" name="liked" id="ui" value="ui"><label for="ui">
-                        <svg class="check-mark-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-                            <polyline class="check-mark-svg-path" points="25.5,53.5 39.5,67.5 72.5,34.5 " />
-                        </svg>
-                        <span>UI</span>
-                    </label>
-                </div>
-                <div class="checkbox-group">
-                    <input type="checkbox" name="liked" id="features" value="features"><label for="features">
-                        <svg class="check-mark-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-                            <polyline class="check-mark-svg-path" points="25.5,53.5 39.5,67.5 72.5,34.5 " />
-                        </svg>
-                        <span>Features</span>
-                    </label>
-                </div>
-                <div class="checkbox-group">
-                    <input type="checkbox" name="liked" id="service" value="service"><label for="service">
-                        <svg class="check-mark-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-                            <polyline class="check-mark-svg-path" points="25.5,53.5 39.5,67.5 72.5,34.5 " />
-                        </svg>
-                        <span>Service</span>
-                    </label>
-                </div>
-                <div class="checkbox-group">
-                    <input type="checkbox" name="liked" id="simpleness" value="simpleness"><label for="simpleness">
-                        <svg class="check-mark-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-                            <polyline class="check-mark-svg-path" points="25.5,53.5 39.5,67.5 72.5,34.5 " />
-                        </svg>
+          content="IE=edge"> 
 
-                        <span>Simpleness</span>
-                    </label>
-                </div>
-            </div>
+    <meta name="viewport" 
 
-            <div class="form-group">
-                <label for="remark">Remarks</label>
-                <textarea name="remark" id="remark" placeholder="Tell Us How Can We Improve.."></textarea>
-            </div>
+          content="width=device-width, initial-scale=1.0"> 
 
-            <div class="form-group">
-                <button id="submit" type="submit">Submit</button>
-            </div>
-        </form>
-    </main>
-</body>
+    <title> 
 
-</html>
+        Build a Survey Form using HTML and CSS 
+
+    </title> 
+
+  
+
+    <style> 
+
+        /* Styling the Body element  
+
+        i.e. Color, Font, Alignment */ 
+
+        body { 
+
+            background-color: #87CEEB; 
+
+            font-family: Verdana; 
+
+            text-align: center; 
+
+        } 
+
+  
+
+        /* Styling the Form (Color, Padding, Shadow) */ 
+
+        form { 
+
+            background-color: #FFFFFF; 
+
+            max-width: 500px; 
+
+            margin: 50px auto; 
+
+            padding: 30px 20px; 
+
+            box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5); 
+
+        } 
+
+  
+
+        /* Styling form-control Class */ 
+
+        .form-control { 
+
+            text-align: left; 
+
+            margin-bottom: 25px; 
+
+        } 
+
+  
+
+        /* Styling form-control Label */ 
+
+        .form-control label { 
+
+            display: block; 
+
+            margin-bottom: 10px; 
+
+        } 
+
+  
+
+        /* Styling form-control input,  
+
+        select, textarea */ 
+
+        .form-control input, 
+
+        .form-control select, 
+
+        .form-control textarea { 
+
+            border: 1px solid #777; 
+
+            border-radius: 2px; 
+
+            font-family: inherit; 
+
+            padding: 10px; 
+
+            display: block; 
+
+            width: 95%; 
+
+        } 
+
+  
+
+        /* Styling form-control Radio  
+
+        button and Checkbox */ 
+
+        .form-control input[type="radio"], 
+
+        .form-control input[type="checkbox"] { 
+
+            display: inline-block; 
+
+            width: auto; 
+
+        } 
+
+  
+
+        /* Styling Button */ 
+
+        button { 
+
+            background-color: #0000; 
+
+            border: 1px solid #777; 
+
+            border-radius: 2px; 
+
+            font-family: inherit; 
+
+            font-size: 21px; 
+
+            display: block; 
+
+            width: 100%; 
+
+            margin-top: 50px; 
+
+            margin-bottom: 20px; 
+
+        } 
+
+    </style> 
+
+</head> 
+    
+<body> 
+
+    <h1>People's lifestyle Survey Form</h1> 
+
+    <!-- Create Form --> 
+
+    <form id="form"> 
+
+        <!-- Details --> 
+
+        <div class="form-control"> 
+
+            <label for="name" id="label-name"> 
+
+                Full Names 
+
+            </label> 
+
+  
+
+            <!-- Input Type Text --> 
+
+            <input type="text" id="name" /> 
+
+        </div> 
+
+        <div class="form-control"> 
+
+            <label for="Email" id="label-email"> 
+
+                Email 
+
+            </label> 
+
+            <!-- Input Type Email--> 
+
+            <input type="Email" id="e"  /> 
+
+        </div> 
+
+        <div class= "form-control"> 
+
+          <label for= "birthday">  
+
+          Date of birth 
+
+          </label> 
+
+          <input type="date" id="birthday" 
+
+          name="birthday"> 
+
+        </div> 
+
+        <div class="form-control"> 
+
+          <label for="phone"> 
+
+            Contact Number 
+
+            <input type="tel" name="phone" id="phone" pattern="[0-9]{3}[0-9]{2}[0-9]{3}" > 
+
+          </label> 
+
+        </div> 
+  
+        <div class="form-control"> 
+
+            <label>What is your favourate food?  
+
+            </label> 
+
+            <label for="inp-1"> 
+
+                <input type="checkbox" name="inp">Pizza 
+
+                  </input> 
+
+              </label> 
+
+            <label for="inp-2"> 
+
+                <input type="checkbox" name="inp">Pasta  
+
+                  </input> 
+
+            </label> 
+
+            <label for="inp-3"> 
+
+                <input type="checkbox" name="inp">Pap and Wors 
+
+                  </input> 
+
+            </label> 
+
+            <label for="inp-4"> 
+
+                <input type="checkbox" name="inp">Other 
+
+                  </input> 
+
+            </label> 
+
+        <div class="form-control"> 
+
+            <label>Please rate your level of agreement on a scale from 1 to 5, with 1 being "Strongly agree"  and 5 being  
+
+                "strongly disagree" 
+
+            </label> 
+
+        <table> 
+
+  <tr> 
+
+    <th scope="col"></th> 
+
+    <th scope="col" id="col1"> Strongly Agree </th> 
+
+    <th scope="col" id="col2"> Agree </th> 
+
+    <th scope="col" id="col3"> Nuetral </th> 
+
+    <th scope="col" id="col4"> Disagree </th> 
+
+    <th scope="col" id="col5"> Strongly Disagree </th> 
+
+  </tr> 
+
+  <tr> 
+
+    <th scope="row" id="row2"> i like to watch movies</th> 
+
+    <td><input type="radio" name="r2" aria-labelledby="row2 col1"></td> 
+
+    <td><input type="radio" name="r2" aria-labelledby="row2 col2"></td> 
+
+    <td><input type="radio" name="r2" aria-labelledby="row2 col3"></td> 
+
+    <td><input type="radio" name="r2" aria-labelledby="row2 col4"></td> 
+
+    <td><input type="radio" name="r2" aria-labelledby="row2 col5"></td> 
+
+  </tr> 
+
+  <tr> 
+
+    <th scope="row" id="row3">I like to listen to radio</th> 
+
+    <td><input type="radio" name="r3" aria-labelledby="row3 col1"></td> 
+
+    <td><input type="radio" name="r3" aria-labelledby="row3 col2"></td> 
+
+    <td><input type="radio" name="r3" aria-labelledby="row3 col3"></td> 
+
+    <td><input type="radio" name="r3" aria-labelledby="row3 col4"></td> 
+
+    <td><input type="radio" name="r3" aria-labelledby="row3 col5"></td> 
+
+  </tr> 
+
+  <tr> 
+
+    <th scope="row" id="row4">I like to eat out</th> 
+
+    <td><input type="radio" name="r4" aria-labelledby="row4 col1"></td> 
+
+    <td><input type="radio" name="r4" aria-labelledby="row4 col2"></td> 
+
+    <td><input type="radio" name="r4" aria-labelledby="row4 col3"></td> 
+
+    <td><input type="radio" name="r4" aria-labelledby="row4 col4"></td> 
+
+    <td><input type="radio" name="r4" aria-labelledby="row4 col5"></td> 
+
+  </tr> 
+
+  <tr> 
+
+    <th scope="row" id="row5">I like to watch tv</th> 
+
+    <td><input type="radio" name="r5" aria-labelledby="row5 col1"></td> 
+
+    <td><input type="radio" name="r5" aria-labelledby="row5 col2"></td> 
+
+    <td><input type="radio" name="r5" aria-labelledby="row5 col3"></td> 
+
+    <td><input type="radio" name="r5" aria-labelledby="row5 col4"></td> 
+
+    <td><input type="radio" name="r5" aria-labelledby="row5 col5"></td> 
+
+  </tr> 
+
+</table> 
+
+        <button type="submit" value="submit"> 
+
+            Submit 
+
+        </button> 
+
+    </form> 
+
+</body> 
+
+</html> 
